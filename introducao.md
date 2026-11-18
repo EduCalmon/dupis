@@ -5,6 +5,10 @@ curtos, e deixe a pessoa interromper. Não despeje tudo de uma vez: apresente o
 bloco 1, pergunte se quer seguir, e assim por diante. Se ela disser que já
 entendeu, pare e passe para o que ela quer fazer.
 
+**Blocos de entrega** (para não despejar tudo de uma vez): **bloco 1** = seções 1 e 2;
+**bloco 2** = seção 3 (os agentes); **bloco 3** = seções 4 a 7 (contexto, delegação, o
+que é opcional e próximos passos). Ao fim de cada bloco, pergunte se quer seguir.
+
 ## 1. O que é
 
 O Dupis é um **time de agentes de IA especialistas** que você instala num projeto.

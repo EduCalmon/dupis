@@ -6,6 +6,15 @@ confirmou; o resto fica "A definir" (texto literal, não um marcador a substitui
 
 Última verificação: {{DATA}}
 
+## Configuração do time
+
+- **Estágio do projeto:** A definir (ideia, protótipo, no ar)
+- **Idioma dos arquivos do time:** A definir
+- **Papéis ativos:** A definir
+- **Papéis desativados:** A definir
+- **Orquestrador de agentes:** A definir (nome, ou "nenhum: subagentes do Claude Code")
+- **Onde roda o líder:** A definir (sessão atual ou instância; sempre na pasta do projeto)
+
 ## Negócio e produto
 
 - **O que é:** A definir

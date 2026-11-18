@@ -1,6 +1,6 @@
 # {{Área}}
 
-Última verificação: {{DATA}} sobre `{{commit}}`
+Última verificação: {{DATA}} sobre `{{commit}}` (ou "sem commit ainda")
 
 Fatos gerais do projeto (público, stack, comandos, regras) ficam em [../PROJETO.md](../PROJETO.md);
 esta nota guarda só o que é específico da área. Se um campo geral estiver vazio aqui,

@@ -20,7 +20,7 @@ O Dupis é um time pronto de especialistas, **sem nenhum dado de um negócio esp
 | Marketing e SEO | `marketing-seo` | Posicionamento, conteúdo, conversão, SEO |
 | Vendas | `vendas` | Roteiro de venda, preço, objeções, proposta |
 
-Se a skill `contexto` (memória do time em `contexto/`) for nova para a pessoa, explique-a: ela está em `introducao.md`, bloco 4.
+Se a skill `contexto` (memória do time em `contexto/`) for nova para a pessoa, explique-a: ela está em `introducao.md`, seção 4.
 
 Nem todo projeto precisa de todos. Um site sem login dispensa banco; um projeto interno dispensa vendas. Pergunte e ative só o que faz sentido, sem apagar nada do repositório da skill.
 
@@ -47,9 +47,8 @@ Regras desse primeiro contato:
   *montar/configurar/instalar*, em vez das quatro opções faça **uma única pergunta
   sim/não**: "Quer uma introdução rápida antes?". Se chegou pedindo outra coisa
   específica, atenda e não ofereça nada.
-- **A introdução** segue `introducao.md`, em **no máximo três blocos** (o que é e o
-  ciclo; os agentes; a skill `contexto` e as ferramentas), que a pessoa pode
-  interromper. Se ela pedir "tudo de uma vez", entregue inteira.
+- **A introdução** segue `introducao.md`, em **três blocos**, definidos no topo do arquivo (seções 1–2, seção 3, seções 4–7),
+  que a pessoa pode interromper. Se ela pedir "tudo de uma vez", entregue inteira.
 - **A configuração** segue `configuracao.md`: projeto, entrevista (em lotes, usando
   o que ela já disse), instalar os arquivos, montar no orquestrador se ela usa
   um (ajudando na hora, com a documentação da ferramenta dela) e conferir.

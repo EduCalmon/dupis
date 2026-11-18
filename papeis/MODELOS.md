@@ -4,6 +4,8 @@ Fonte única de qual modelo executa cada agente. As instruções de cada papel
 apontam para cá. Papel e modelo são decisões separadas: o líder pode mudar o
 modelo de uma tarefa conforme risco e disponibilidade.
 
+Esta tabela é a **fonte** de modelo por papel; `configuracao.md` e os papéis seguem ela.
+
 Última revisão: {{DATA}}. Nomes de modelo mudam rápido: confira no seletor de
 cada ferramenta antes de usar.
 
@@ -46,7 +48,7 @@ ou agente do orquestrador):
 | --- | --- | --- |
 | Líder | Intermediário, com um conselheiro mais capaz nas decisões grandes e antes de dar por pronto | Poupa cota sem perder o olhar crítico |
 | Segurança e privacidade | Mais capaz | Risco mais alto da equipe; revisão rotineira pode descer um nível |
-| Banco de dados | Intermediário | Erro em política de acesso ou migração vaza dados ou quebra produção: revise com cuidado |
+| Banco de dados | Intermediário; mais capaz em política de acesso e autenticação | Erro em política de acesso ou migração vaza dados ou quebra produção: revise com cuidado |
 | Backend | Intermediário | Pode usar outra ferramenta que o usuário tenha, exceto em segurança e cálculo regulado |
 | Frontend | Intermediário | Ajuste visual difícil ou revisão final: um nível acima |
 | Designer | Intermediário; mais capaz em definição de marca | Precisa ser crítico: modelo fraco tende a concordar |

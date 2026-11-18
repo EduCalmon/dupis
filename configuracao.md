@@ -10,9 +10,10 @@ porque os prompts dos agentes apontam para `agentes/...`, que precisa existir.
 
 ## Etapa 1: o projeto
 
-Pergunte se a configuração é **para um projeto específico** (padrão: a pasta
-atual) ou uma instalação genérica, sem fatos do negócio. Sem projeto, instale os
-papéis e deixe o `PROJETO.md` todo em "A definir".
+Se a pessoa já deu o nome e o negócio do projeto, **pule esta etapa**: é um projeto
+específico. Se não, pergunte se a configuração é **para um projeto específico**
+(padrão: a pasta atual) ou uma instalação genérica, sem fatos do negócio. Sem
+projeto, instale os papéis e deixe o `PROJETO.md` todo em "A definir".
 
 ## Etapa 2: entrevista
 
@@ -86,15 +87,26 @@ papéis ativos:
 | Vendas | sem nota própria (usa `contexto/tarefas/` e `marketing/product-marketing.md`) |
 | (nenhum; só se há deploy) | `areas/infra.md` |
 
-Preencha só com o que foi confirmado. Remova do `INDEX.md` e do `AGENTS.md` as
-linhas das áreas e dos papéis que não existem no projeto.
+Preencha só com o que foi confirmado.
+
+**Papel desativado:** remova a linha dele de **todos** estes lugares, não só dos
+dois primeiros: `AGENTS.md`, `contexto/INDEX.md` (se citar o papel), a tabela de delegação do
+`agentes/lider/INSTRUCOES.md` e as **duas** tabelas do `agentes/MODELOS.md`
+("Divisão real" e "Distribuição sugerida") e a tabela de `agentes/skills-recomendadas.md`. Remova também as linhas das áreas que
+não existem. Depois confirme: para cada papel desativado,
+`grep -rnE "agentes/<pasta>|\.\./<pasta>/|^\| <Nome do papel> \|" agentes AGENTS.md contexto`
+não pode achar nada (a pasta `agentes/<pasta>/` dele nem é copiada). Menção em
+texto corrido ("marketing, designer e vendas só afirmam isto") é aceitável.
 
 Depois:
 
 - **Marcadores `{{...}}`:** substitua pelas respostas. O texto literal
   "A definir" é aceito como resposta e **não** conta como marcador pendente.
-- Preencha a tabela "Divisão real neste projeto" do `agentes/MODELOS.md` e
+- Preencha as colunas Ferramenta e Modelo da "Divisão real neste projeto" do
+  `agentes/MODELOS.md` (a coluna "Onde roda" fica "A definir" até a etapa 4) e
   **apague** as frases de exemplo ("Preencha no briefing...").
+- Registre as respostas da entrevista na seção **"Configuração do time"** do
+  `contexto/PROJETO.md` (estágio, idioma, papéis ativos e desativados, orquestrador).
 - Se aprovou skills de terceiros, instale só essas, uma a uma, lendo o README de
   cada uma e conferindo a licença.
 
@@ -106,10 +118,17 @@ porque eles mudam.
 
 1. Descubra qual é e leia a documentação dele (ou a skill dele, se instalada)
    antes de agir. Não presuma comandos nem opções.
-2. **Pergunte onde roda o líder:** a sessão atual ou uma instância nova.
-3. Veja o que já existe e reaproveite antes de criar algo novo. Confira também os
-   **limites do plano ou da licença** (número de espaços, andares ou agentes) e
-   avise a pessoa antes de estourá-los.
+2. **Pergunte onde roda o líder:** a sessão atual ou uma instância nova. Em qualquer
+   caso, **o líder precisa trabalhar na pasta do projeto**, senão não encontra
+   `AGENTS.md`, `agentes/` nem `contexto/`. Se a sessão atual está em outra pasta,
+   peça para a pessoa abrir uma sessão do líder na pasta do projeto.
+3. Veja o que já existe e reaproveite antes de criar algo novo. **Nomes iguais:** se
+   já houver uma instância com o nome do papel, pergunte se deve reaproveitá-la (o
+   melhor) ou criar outra com um sufixo que você escolhe; não deixe o orquestrador
+   numerar sozinho sem avisar. Confira os **limites do plano ou da licença** (número
+   de espaços, andares ou agentes). Se a ferramenta não mostra esses limites, diga
+   isso à pessoa, pergunte se ela sabe o limite e crie primeiro os papéis essenciais
+   (líder, backend, frontend), observando erros antes de criar o resto.
 4. Proponha **uma instância por papel ativo** com ferramenta e modelo de
    `agentes/MODELOS.md`, em tabela, e **espere a aprovação**: cada instância gasta cota.
 5. O prompt de cada papel é o mesmo para qualquer ferramenta (algumas não leem o
@@ -118,10 +137,16 @@ porque eles mudam.
    existem antes de criar outros; nunca publique em produção sem pedir". A pasta de
    trabalho de todos é a do projeto.
 6. Avise que muitas CLIs perguntam, na primeira vez em cada pasta, se ela é
-   confiável; a pessoa precisa responder em cada terminal novo.
-7. Papéis de segurança, dados e autenticação ficam no modelo mais capaz.
-8. Registre no `contexto/PROJETO.md` qual orquestrador é usado e atualize a tabela
-   "Divisão real" do `MODELOS.md`.
+   confiável. Ao abrir vários terminais de uma vez, a resposta "sim" num deles pode
+   valer para os demais, então a pergunta pode aparecer em uns e não em outros.
+   **Olhe a tela de cada terminal antes de enviar teclas**; não mande Enter ou
+   setas às cegas.
+7. Os modelos seguem o `agentes/MODELOS.md`, que é a fonte: segurança e privacidade
+   no mais capaz; os demais no nível que a tabela indica (banco de dados sobe de
+   nível em política de acesso e autenticação).
+8. Registre na seção "Configuração do time" do `contexto/PROJETO.md` qual
+   orquestrador é usado e onde roda o líder, e preencha a coluna "Onde roda" da
+   tabela "Divisão real" do `MODELOS.md`.
 
 Sem orquestrador: o líder delega por subagentes do Claude Code
 (`agentes/orquestracao.md`); registre a escolha no `PROJETO.md`.
@@ -129,8 +154,9 @@ Sem orquestrador: o líder delega por subagentes do Claude Code
 ## Etapa 5: conferir e entregar
 
 - Nenhum `{{` pendente, fora do modelo `_nota-da-area.md`:
-  `grep -rn "{{" agentes contexto AGENTS.md CLAUDE.md .claude --exclude=_nota-da-area.md`.
-  "A definir" é aceito.
+  `grep -rn "{{" agentes contexto AGENTS.md CLAUDE.md .claude/agents .claude/skills/contexto --exclude=_nota-da-area.md`.
+  "A definir" é aceito. **Não varra `.claude/skills/dupis`** (a própria skill): os
+  modelos dela têm `{{...}}` de propósito.
 - Todo link de `agentes/*/INSTRUCOES.md` e de `contexto/INDEX.md` abre um arquivo
   que existe.
 - **A skill `contexto` e os subagentes só carregam numa sessão nova.** Arquivos
