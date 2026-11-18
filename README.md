@@ -9,6 +9,10 @@ economiza tokens.
 Não há nada de negócio específico aqui: o Dupis se adapta ao projeto que você
 tiver, seja um SaaS, um site, uma ferramenta interna ou uma ideia ainda no papel.
 
+![O time Dupis montado num orquestrador: o líder no centro e um especialista por papel ao redor](docs/time-de-agentes.png)
+
+*O time montado pelo Dupis num projeto de teste: o líder no centro e um agente por papel, cada um com seu modelo e ferramenta. (O painel borrado no topo é de outra sessão e não faz parte do time.)*
+
 ---
 
 ## Por que usar
