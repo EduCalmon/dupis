@@ -35,6 +35,9 @@ git clone https://github.com/EduCalmon/dupis ~/.claude/skills/dupis
 git clone https://github.com/EduCalmon/dupis .claude/skills/dupis
 ```
 
+Depois de clonar, **abra uma sessão nova** do Claude Code: skills instaladas no meio de
+uma sessão só carregam na próxima.
+
 Atualizar: `git pull` na pasta clonada. Projetos já montados não mudam sozinhos;
 recopie o papel que quiser atualizar.
 
@@ -109,6 +112,8 @@ contexto/
 ├── INDEX.md        porta de entrada: aponta para a nota certa
 ├── PROJETO.md      stack, comandos e regras do projeto, num só lugar
 ├── areas/          uma nota curta por área (backend, dados, marca...)
+├── marketing/      posicionamento do produto (público, proposta de valor, voz)
+├── marca/          plataforma de marca
 ├── decisoes/       decisões isoladas e o porquê
 └── tarefas/        especificações, tickets e repasses entre sessões
 ```
@@ -122,7 +127,7 @@ fonte da verdade; só se registra o que foi confirmado; segredo nunca entra.
 Usa um orquestrador (como o [Maestri](https://www.producthunt.com/products/maestri))
 ou outra ferramenta? A skill pergunta e ajuda a configurar **na hora, com você**,
 seguindo a documentação da ferramenta. Sem orquestrador, o líder delega por
-subagentes do Claude Code. Veja [`orquestracao.md`](orquestracao.md).
+subagentes do Claude Code. Veja [`papeis/orquestracao.md`](papeis/orquestracao.md).
 
 ## O que tem no repositório
 
@@ -131,17 +136,15 @@ subagentes do Claude Code. Veja [`orquestracao.md`](orquestracao.md).
 | [`SKILL.md`](SKILL.md) | Ponto de entrada: primeiro contato, o time, ciclo de trabalho |
 | [`introducao.md`](introducao.md) | Roteiro para explicar o time, os agentes, modelos, skills e a skill `contexto` |
 | [`configuracao.md`](configuracao.md) | Configuração: projeto, entrevista, orquestrador, instalação |
-| [`papeis/`](papeis/) | Instruções de cada papel e `MODELOS.md` |
+| [`papeis/`](papeis/) | Instruções de cada papel, `MODELOS.md`, `orquestracao.md` e `skills-recomendadas.md` |
 | [`templates/`](templates/) | `AGENTS.md`, `CLAUDE.md`, `contexto/`, skill `contexto`, subagentes |
-| [`orquestracao.md`](orquestracao.md) | Como o líder delega |
-| [`skills-recomendadas.md`](skills-recomendadas.md) | Skills de terceiros por papel (só links e licenças) |
 
 ## Skills de terceiros
 
 Os papéis aproveitam skills de outros autores (tdd, auditoria de segurança,
 design, SEO...). **Nenhuma vem copiada**: cada uma tem licença própria, e linkar
 mantém você na versão atual. Instale só as que usar, lendo o código antes, como de
-qualquer dependência. Lista em [`skills-recomendadas.md`](skills-recomendadas.md).
+qualquer dependência. Lista em [`papeis/skills-recomendadas.md`](papeis/skills-recomendadas.md).
 
 ## Princípios
 

@@ -21,7 +21,7 @@ Modelo de execução: ver [agentes/MODELOS.md](../MODELOS.md).
 
 ## Skills e quando acionar
 
-Origem e links: `skills-recomendadas.md` da Dupis. Acione pelo pedido, sem esperar
+Origem e links: [skills-recomendadas.md](../skills-recomendadas.md). Acione pelo pedido, sem esperar
 o nome do comando; leia o arquivo da skill só quando for usar.
 
 | O pedido envolve | Skill sugerida |

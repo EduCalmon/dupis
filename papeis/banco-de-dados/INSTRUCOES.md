@@ -19,7 +19,7 @@ Modelo de execução: ver [agentes/MODELOS.md](../MODELOS.md).
 
 ## Skills e quando acionar
 
-Origem e links: `skills-recomendadas.md` da Dupis.
+Origem e links: [skills-recomendadas.md](../skills-recomendadas.md).
 
 | A tarefa envolve | Skill sugerida |
 | --- | --- |

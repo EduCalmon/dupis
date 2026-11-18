@@ -9,8 +9,7 @@ autorizado, decisões, ticket), nunca o histórico da conversa.
 O líder chama o `Agent` com o pacote e a ordem "siga `agentes/<papel>/INSTRUCOES.md`".
 Serve para áreas bem delimitadas e para partes independentes em paralelo.
 
-Já vêm três subagentes só de leitura em `templates/subagentes/` (copiados para
-`.claude/agents/`), baratos e rápidos:
+Já vêm três subagentes só de leitura em `.claude/agents/`, baratos e rápidos:
 
 | Subagente | Para quê |
 | --- | --- |
@@ -26,7 +25,7 @@ sessão principal.
 
 Se o usuário tem outra CLI de IA (para poupar cota ou usar um modelo específico),
 rode-a numa sessão à parte e entregue o pacote pronto, com a instrução de seguir
-`AGENTS.md` e o `INSTRUCOES.md` do papel (algumas não leem o `CLAUDE.md`). Se não
+`AGENTS.md` e o `INSTRUCOES.md` do papel (algumas não leem o `CLAUDE.md`, por isso o prompt sempre cita o `AGENTS.md`). Se não
 houver automação, o líder entrega o pacote para o usuário colar.
 
 ## 3. Orquestrador de agentes (opcional)
@@ -34,22 +33,23 @@ houver automação, o líder entrega o pacote para o usuário colar.
 Ferramentas como o [Maestri](https://www.producthunt.com/products/maestri)
 organizam um agente por papel, cada um com seu modelo, conectados entre si. Se o
 usuário usa uma, a configuração é feita **na hora com ele**, seguindo a
-documentação da ferramenta; a Dupis não traz comandos de nenhuma (`configuracao.md`,
-etapa 3). O que vale em qualquer uma:
+documentação da ferramenta; a Dupis não traz comandos de nenhuma. O que vale em qualquer uma:
 
 | Conceito | Na Dupis |
 | --- | --- |
 | Agente coordenador | Líder |
 | Um agente por papel | Cada `agentes/<papel>/INSTRUCOES.md` ativo |
 | Modelo de cada agente | A tabela de `agentes/MODELOS.md` |
-| Prompt de cada agente | Curto: "Siga `agentes/<papel>/INSTRUCOES.md` e leia `contexto/INDEX.md`" |
+| Prompt de cada agente | Curto, igual para qualquer ferramenta: "Siga `AGENTS.md` e `agentes/<papel>/INSTRUCOES.md` e leia `contexto/INDEX.md`" |
 | Envio de tarefa | O pacote de delegação, com o retorno indo ao líder |
 | Trabalho arriscado | Branch e cópia de trabalho próprias |
 
 Práticas que funcionaram:
 - Veja o que já existe antes de criar agentes novos e reaproveite.
 - Não encerre agentes ao terminar uma tarefa: recriar gasta cota.
-- O prompt só aponta para os `INSTRUCOES.md`; não duplique regras nele.
+- O prompt só aponta para os arquivos; não duplique regras nele. Só crie os agentes **depois** de instalar `agentes/` no projeto, senão o prompt aponta para arquivos que não existem.
+- Defina se o líder é a sessão atual ou uma instância nova.
+- Antes de criar, confira os limites do plano/licença da ferramenta (número de espaços ou agentes) e avise que CLIs costumam perguntar na primeira vez se a pasta é confiável.
 
 ## Quando não delegar
 

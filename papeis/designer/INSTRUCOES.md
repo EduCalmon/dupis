@@ -75,7 +75,7 @@ estiver "A definir", diga isso e proponha descobrir antes de apostar a marca:
 
 ## Skills e quando acionar
 
-Origem e links: `skills-recomendadas.md` da Dupis. Acione pelo pedido, sem
+Origem e links: [skills-recomendadas.md](../skills-recomendadas.md). Acione pelo pedido, sem
 esperar o usuário dizer o nome.
 
 | O usuário traz ou pede | Skill sugerida |

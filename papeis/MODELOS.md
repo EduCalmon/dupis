@@ -9,11 +9,28 @@ cada ferramenta antes de usar.
 
 ## Ferramentas do usuário
 
-Preencha no briefing. Exemplo de estrutura:
+Preencha no briefing e **apague esta frase**:
 
 | Ferramenta | Modelos disponíveis | Validade / limite |
 | --- | --- | --- |
 | {{FERRAMENTA}} | {{MODELOS}} | {{PLANO, LIMITE OU PRAZO}} |
+
+## Divisão real neste projeto
+
+Preencha depois de escolher (apague a linha que não usar). É aqui que fica registrado
+quem executa cada papel, em qual ferramenta e modelo, e onde roda (sessão, terminal
+ou agente do orquestrador):
+
+| Papel | Ferramenta | Modelo | Onde roda |
+| --- | --- | --- | --- |
+| Líder | A definir | A definir | A definir |
+| Backend | A definir | A definir | A definir |
+| Frontend | A definir | A definir | A definir |
+| Banco de dados | A definir | A definir | A definir |
+| Segurança e privacidade | A definir | A definir | A definir |
+| Designer | A definir | A definir | A definir |
+| Marketing e SEO | A definir | A definir | A definir |
+| Vendas | A definir | A definir | A definir |
 
 ## Princípio: o modelo acompanha o risco, não o prestígio do papel
 

@@ -19,7 +19,7 @@ Modelo de execução: ver [agentes/MODELOS.md](../MODELOS.md).
 
 ## Skills e quando acionar
 
-Origem e links: `skills-recomendadas.md` da Dupis. Onde as skills procuram o
+Origem e links: [skills-recomendadas.md](../skills-recomendadas.md). Onde as skills procuram o
 arquivo de contexto de marketing (ex.: `.agents/product-marketing.md`), use
 `contexto/marketing/product-marketing.md`.
 

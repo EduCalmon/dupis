@@ -20,7 +20,10 @@ Stack, comandos e regras do projeto: [PROJETO.md](PROJETO.md).
 | [areas/marca.md](areas/marca.md) | Logo, cor, tipografia, identidade visual |
 | [areas/infra.md](areas/infra.md) | Deploy, variáveis de ambiente, produção |
 
-(Apague as linhas das áreas que o projeto não tem.)
+Outros documentos: [marketing/product-marketing.md](marketing/product-marketing.md) (posicionamento) e
+[marca/plataforma.md](marca/plataforma.md) (plataforma de marca). Modelo para novas áreas: [areas/_nota-da-area.md](areas/_nota-da-area.md).
+
+(Apague as linhas das áreas e dos documentos que o projeto não tem.)
 
 ## Decisões e tarefas
 

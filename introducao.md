@@ -37,7 +37,7 @@ resultado. Nada aqui é de um negócio específico: o time se adapta ao seu proj
 | **Vendas** | Roteiro de venda, preço, objeções, proposta | Intermediário | discovery-calls, objection-handling, proposal-pricing, sales-enablement |
 
 Fontes de verdade: modelos em `papeis/MODELOS.md`; origem, link e licença de cada
-skill em `skills-recomendadas.md`. Se a tabela acima divergir deles, valem eles.
+skill em `papeis/skills-recomendadas.md`. Se a tabela acima divergir deles, valem eles.
 As skills de terceiros **não vêm instaladas**: o time funciona sem elas, e elas
 são um reforço que a pessoa instala se quiser.
 
@@ -67,7 +67,7 @@ Esta é a parte que mais economiza tokens, então explique com calma.
 
 O líder pode delegar por **subagentes do Claude Code** (padrão), por outra
 ferramenta de linha de comando ou por um **orquestrador de agentes**, como o
-Maestri. Detalhes em `orquestracao.md`. Três
+Maestri. Detalhes em `papeis/orquestracao.md`. Três
 subagentes de leitura já vêm prontos: `busca`, `chamadas` e `auditoria`.
 
 ## 6. O que você não precisa usar

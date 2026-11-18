@@ -42,17 +42,25 @@ Regras desse primeiro contato:
 - **Ofereça uma vez.** Se a pessoa recusar tudo, é escolha dela: respeite, faça o
   que ela pediu e não volte a oferecer, a menos que ela peça ("configure o
   Dupis", "me explique o time").
-- **A introdução** segue `introducao.md`: o que é, como funciona o ciclo, cada
-  agente com seu modelo e suas skills, e a skill `contexto` (a memória do time),
-  em blocos curtos que a pessoa pode interromper.
-- **A configuração** segue `configuracao.md`: escolher o projeto, entrevistar
-  (com a skill `grilling` do Matt Pocock, se a pessoa quiser), perguntar se usa
-  um orquestrador de agentes (como o Maestri) e ajudar a configurar, na hora e com a documentação dele, instalar e conferir.
-- Se a pessoa já chegou pedindo algo específico ("instale o time no projeto X"),
-  não repita a oferta de introdução: confirme só o que falta e vá em frente.
+- **Pule o que o pedido já respondeu, sem criar mais ida e volta.** Se ela chegou
+  pedindo para *explicar*, vá para a introdução. Se chegou pedindo para
+  *montar/configurar/instalar*, em vez das quatro opções faça **uma única pergunta
+  sim/não**: "Quer uma introdução rápida antes?". Se chegou pedindo outra coisa
+  específica, atenda e não ofereça nada.
+- **A introdução** segue `introducao.md`, em **no máximo três blocos** (o que é e o
+  ciclo; os agentes; a skill `contexto` e as ferramentas), que a pessoa pode
+  interromper. Se ela pedir "tudo de uma vez", entregue inteira.
+- **A configuração** segue `configuracao.md`: projeto, entrevista (em lotes, usando
+  o que ela já disse), instalar os arquivos, montar no orquestrador se ela usa
+  um (ajudando na hora, com a documentação da ferramenta dela) e conferir.
 - Cada etapa pede aprovação antes de criar arquivos ou terminais. O objetivo é
   que a pessoa termine com um **time completo** se quiser, e com exatamente o
   que escolheu se não quiser.
+- **A skill só carrega numa sessão nova.** Se foi instalada ou copiada para
+  `.claude/skills/` durante esta sessão, ela não vale nela; se a pessoa já está
+  lendo estes arquivos por outro caminho, siga normalmente. Ao terminar a
+  configuração, avise que a skill `contexto` e os subagentes do projeto só passam a
+  valer em uma sessão nova.
 
 ## Como usar
 
@@ -70,7 +78,7 @@ Depois de instalado, o líder conduz tudo: leia `agentes/lider/INSTRUCOES.md`. R
 3. Delegar com o pacote (objetivo, escopo, critérios de aceitação, contexto autorizado, decisões).
 4. Revisar a entrega, rodar os testes e atualizar as notas de `contexto/`.
 
-Como delegar na prática (subagentes do Claude Code, orquestrador de agentes ou colagem manual): [orquestracao.md](orquestracao.md). Escolha de modelo por risco: [papeis/MODELOS.md](papeis/MODELOS.md). Skills de terceiros que cada papel aproveita (só links, nada copiado): [skills-recomendadas.md](skills-recomendadas.md).
+Como delegar na prática (subagentes do Claude Code, orquestrador de agentes ou colagem manual): [papeis/orquestracao.md](papeis/orquestracao.md). Escolha de modelo por risco: [papeis/MODELOS.md](papeis/MODELOS.md). Skills de terceiros que cada papel aproveita (só links, nada copiado): [papeis/skills-recomendadas.md](papeis/skills-recomendadas.md).
 
 ## Princípios que o time carrega (valem em qualquer projeto)
 

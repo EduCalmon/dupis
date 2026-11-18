@@ -50,7 +50,7 @@ Antes de delegar ou codar, liste as decisões que a tarefa deixa em aberto. Se
 houver alguma, faça **uma rodada** de perguntas numeradas, cada uma com a sua
 recomendação, pelo `AskUserQuestion` (até 4 por chamada). Enquanto espera,
 adiante o que não depende da resposta. A skill `grilling` (ver
-`skills-recomendadas.md` da Dupis) ajuda a testar um plano.
+[skills-recomendadas.md](../skills-recomendadas.md)) ajuda a testar um plano.
 
 Pergunte sempre que a tarefa:
 - admite mais de uma leitura (texto truncado, "essa tela", "melhore isso");
@@ -82,7 +82,7 @@ Delegue só os papéis ativos no projeto (veja `AGENTS.md`).
 
 Escolha o modelo pela [tabela de modelos](../MODELOS.md), considerando risco e
 disponibilidade. Mecânica de delegação (subagente, terminal, colagem manual):
-`orquestracao.md` da skill Dupis.
+[orquestracao.md](../orquestracao.md).
 
 **Delegue** quando a separação trouxer vantagem: área bem delimitada, trabalho que
 cabe num contexto novo ou partes independentes em paralelo. **Faça você mesmo**
